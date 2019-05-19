@@ -24,7 +24,7 @@
     "ts-node": "7.0.1",
     "typescript": "3.3.3333"
   },
-  "homepage": "https://khanghldk.github.io",
+  "homepage": "https://khanghldk.github.io/react-blog",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
