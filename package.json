@@ -24,14 +24,16 @@
     "ts-node": "7.0.1",
     "typescript": "3.3.3333"
   },
+  "homepage": "https://khanghldk.github.io/react-blog/",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && ts-node -O {\\\"module\\\":\\\"commonjs\\\"} node_modules/navi-scripts/bin/navi-scripts.js build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "serve": "navi-scripts serve",
     "deploy": "netlify deploy --dir=build",
-    "deploy:prod": "netlify deploy --dir=build --prod"
+    "deploy:prod": "netlify deploy --dir=build --prod",
+    "local:deploy": "npm run build ; npx push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "eslintConfig": {
     "extends": "react-app"
