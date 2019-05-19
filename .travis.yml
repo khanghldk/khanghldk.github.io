@@ -11,7 +11,7 @@ deploy:
   provider: pages
   skip_cleanup: true
   keep_history: true
-  github_token: 8d2326f6a931f82a7f656f8837824eed87f2324d
+  github_token: 539a7dc761d882f0cefe0af3b20a5af9edb38c54
   target-branch: gh-pages
   local-dir: build
   on:
