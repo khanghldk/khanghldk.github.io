@@ -2,7 +2,7 @@ import { join } from 'path'
 import React from 'react'
 import { Link } from 'react-navi'
 import { formatDate } from '../utils/formats'
-import styles from './ArticleMeta.module.css'
+import styles from './ArticleMeta.module.scss'
 
 interface ArticleMetaProps {
   blogRoot: string

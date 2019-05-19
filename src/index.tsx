@@ -3,7 +3,7 @@ import { createBrowserNavigation } from 'navi'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router } from 'react-navi'
-import './index.module.css'
+import './index.module.scss'
 import routes from './routes'
 import * as serviceWorker from './serviceWorker'
 
