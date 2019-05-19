@@ -33,7 +33,7 @@
     "serve": "navi-scripts serve",
     "deploy": "netlify deploy --dir=build",
     "deploy:prod": "netlify deploy --dir=build --prod",
-    "local:deploy": "npm run build ; npx push-dir --dir=dist --branch=gh-pages --cleanup"
+    "local:deploy": "npm run build ; npm push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "eslintConfig": {
     "extends": "react-app"
