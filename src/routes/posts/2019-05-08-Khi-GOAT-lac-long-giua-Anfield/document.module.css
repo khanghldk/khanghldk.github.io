@@ -10,23 +10,3 @@
     background-position: 50% 50%;
     background-image: url("./tumblr_pr658tJx2I1whzjuno1_1280.jpg");
 }
-
-@keyframes Index-logo-navi-spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes Index-logo-react-spin {
-    from {
-        transform: rotate(330deg);
-    }
-
-    to {
-        transform: rotate(-30deg);
-    }
-}
