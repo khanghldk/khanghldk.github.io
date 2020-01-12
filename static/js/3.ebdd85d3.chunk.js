@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{82:function(n,i,t){"use strict";t.r(i),i.default={title:"Khi GOAT l\u1ea1c l\xf5ng gi\u1eefa Anfield",tags:["football","messi"],spoiler:"Ch\u01b0a ai c\xf3 \u0111\u1ee7 s\u1ee9c t\u01b0\u1edfng t\u01b0\u1ee3ng \u0111\u1ec3 ngh\u0129 \u0111\u1ebfn vi\u1ec5n c\u1ea3nh kinh ho\xe0ng \u0111\xf3 c\u1ee7a FC Barcelona t\u1ea1i Anfield",getContent:function(){return t.e(5).then(t.bind(null,75))}}}}]);
-//# sourceMappingURL=3.ebdd85d3.chunk.js.map

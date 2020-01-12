@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>npx create-react-blog</title>
+        <link>/</link>
+        <description>A clone of Dan Abramov&apos;s overreacted.io using create-react-app-mdx and Navi</description>
+        <lastBuildDate>Sun, 12 Jan 2020 15:42:01 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Khi GOAT lạc lõng giữa Anfield]]></title>
+            <link>/posts/2019-05-08/Khi-GOAT-lac-long-giua-Anfield</link>
+            <guid>/posts/2019-05-08/Khi-GOAT-lac-long-giua-Anfield</guid>
+            <content:encoded><![CDATA[<div><div class="document_cover__cFpJ-"></div><h2 id="những-liverpudlian">Những Liverpudlian…</h2><p>chắc cũng chỉ nghĩ đến việc thắng Barcelona 4–0 ngay tại Anfield trong những câu nói đùa lạc quan nhất hoặc trong những giấc mơ hoang đường nhất của họ…</p><h2 id="còn-mình">Còn mình…</h2><p>thì lạc quan hơn bao giờ hết, sau chiến thắng 3–0 của Barca ngay tại Camp Nou.<br/>
+Cái viễn cảnh ăn ba một lần nữa được khơi dậy trong tâm trí mình.<br/>
+Trebles là một cái gì đó rất đỗi tự hào nhưng lại vô cùng ám ảnh đối với các cules.</p></div>]]></content:encoded>
+        </item>
+    </channel>
+</rss>
