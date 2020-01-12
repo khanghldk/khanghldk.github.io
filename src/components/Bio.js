@@ -2,11 +2,7 @@ import React from 'react'
 import styles from './Bio.module.css'
 import { getGravatarURL } from '../utils/getGravatarURL'
 
-interface BioProps {
-  className?: string
-}
-
-function Bio(props: BioProps) {
+function Bio(props) {
   let photoURL = getGravatarURL({
     email: "haleduykhang@gmail.com",
     size: 56,

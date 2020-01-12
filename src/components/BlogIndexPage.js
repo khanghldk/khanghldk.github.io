@@ -1,4 +1,3 @@
-import { Route } from 'navi'
 import React from 'react'
 import { Link } from 'react-navi'
 import siteMetadata from '../siteMetadata'
@@ -7,19 +6,7 @@ import Bio from './Bio'
 import Pagination from './Pagination'
 import styles from './BlogIndexPage.module.css'
 
-interface BlogIndexPageProps {
-  blogRoot: string
-  pageCount: number
-  pageNumber: number
-  postRoutes: Route[]
-}
-
-function BlogIndexPage({
-  blogRoot,
-  pageCount,
-  pageNumber,
-  postRoutes,
-}: BlogIndexPageProps) {
+function BlogIndexPage({ blogRoot, pageCount, pageNumber, postRoutes }) {
   return (
     <div>
       <header>
@@ -44,14 +31,12 @@ function BlogIndexPage({
       )}
       <footer className={styles.footer}>
         <div>
-          <a href="./rss.xml" target="_blank" style={{ float: 'right' }}>
+          <a href="/rss.xml" target="_blank" style={{ float: 'right' }}>
             RSS
           </a>
-          <Link href="./about">About</Link> &bull;{' '}
-          <Link href="./tags">Tags</Link> &bull;{' '}
-          <a href="https://github.com/frontarm/create-react-blog">
-            Source
-          </a>
+          <Link href="/about">About</Link> &bull; <Link href="/tags">Tags</Link>{' '}
+          &bull;{' '}
+          <a href="https://github.com/frontarm/create-react-blog">Source</a>
         </div>
       </footer>
     </div>

@@ -1,13 +1,7 @@
 import React from 'react'
 import styles from './LoadingIndicator.module.css'
 
-interface LoadingIndicatorProps {
-  active?: boolean
-  className?: string
-  style?: React.CSSProperties
-}
-
-function LoadingIndicator({ active, className, style }: LoadingIndicatorProps) {
+function LoadingIndicator({ active, className, style }) {
   return (
     <div
       className={`

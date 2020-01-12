@@ -1,12 +1,12 @@
 import React from 'react'
-import { compose, crawl, mount, resolve, route, withContext, withCrawlerPatterns, Route } from 'navi'
+import { compose, crawl, mount, resolve, route, withContext, withCrawlerPatterns } from 'navi'
 import { join } from 'path'
 import { fromPairs } from 'lodash'
 import TagIndexPage from '../components/TagIndexPage'
 import TagPage from '../components/TagPage'
 import routes from './index'
 
-async function crawlRoutes(root): Promise<Route[]> {
+async function crawlRoutes(root) {
   if (!crawlRoutes.cache[root]) {
     let { paths } = await crawl({
       context: {
@@ -23,21 +23,15 @@ async function crawlRoutes(root): Promise<Route[]> {
   }
   return crawlRoutes.cache[root]
 }
-crawlRoutes.cache = {} as { [root: string]: Route[] }
-
-interface TagsNavContext {
-  blogRoot: string
-  tagsRoot: string
-  crawlingRoutes?: boolean
-}
+crawlRoutes.cache = {}
 
 const tagRoutes = compose(
-  withContext((req, context): TagsNavContext => ({
+  withContext((req, context) => ({
     ...context,
     tagsRoot: req.mountpath,
   })),
   withCrawlerPatterns({
-    '/:tag': async (req, context: TagsNavContext) => {
+    '/:tag': async (req, context) => {
       if (!context.crawlingRoutes) {
         return getAvailableTagsFromRoutes(
           await crawlRoutes(context.blogRoot)
@@ -47,7 +41,7 @@ const tagRoutes = compose(
     }
   }),
   mount({
-    '/': route<TagsNavContext>({
+    '/': route({
       title: 'Tags',
 
       getView: async (req, context) => {
@@ -69,6 +63,7 @@ const tagRoutes = compose(
 
         return (
           <TagIndexPage
+            blogRoot={context.blogRoot}
             tags={tags.map(name => ({
               name,
               href: join(req.mountpath, name.toLowerCase()),
@@ -79,15 +74,15 @@ const tagRoutes = compose(
       },
     }),
 
-    '/:tag': route<TagsNavContext>({
+    '/:tag': route({
       getTitle: req => req.params.tag,
       getView: async (req, context) => {
         let lowerCaseTag = req.params.tag.toLowerCase()
         let routes = await crawlRoutes(context.blogRoot)
 
         // Build a list of pages that include the tag from the site map
-        let tagRoutes = [] as Route[]
-        routes.forEach((route: Route) => {
+        let tagRoutes = []
+        routes.forEach(route => {
           let tags = (route.data && route.data.tags) || []
           if (tags.find(metaTag => metaTag.toLowerCase() === lowerCaseTag)) {
             tagRoutes.push(route)
@@ -103,10 +98,10 @@ const tagRoutes = compose(
         )
       },
     }),
-  })
+  }),
 )
 
-function getAvailableTagsFromRoutes(routes: Route[]): string[] {
+function getAvailableTagsFromRoutes(routes) {
   return Array.from(
     new Set(
       [].concat(...routes.map(route => (route.data && route.data.tags) || [])),
